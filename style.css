@@ -1,0 +1,147 @@
+body {
+  background-image: url();
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000 linear-gradient(transparent 5%, rgba(0, 27, 102, 0.9));
+  overflow: hidden;
+}
+
+/* ANIMATION DE LA NEIGE */
+.snow {
+  position: absolute;
+  border-radius: 50px;
+  background: rgba(240, 240, 243);
+  opacity: 0.3;
+  animation: anim 6s;
+}
+
+@keyframes anim {
+  to {
+    top: 1000px;
+    opacity: 0.8;
+  }
+}
+
+/* ANIMATION TEXTE CHRISTMAS */
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+  font-size: 60px;
+}
+.waviy span {
+  font-family: fantasy;
+  font-weight: lighter;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0 0 20px rgb(218, 216, 148);
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+@keyframes waviy {
+  0%,
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-20px);
+  }
+}
+
+/* BOUTON POUR ALLUMER/ETEINDRE LA GUIRLANDE */
+
+button {
+  background-color: beige;
+  transition: all 0.2s linear;
+  font-family: fantasy;
+  padding: 5px 10px;
+  margin: 30px auto;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: rgb(15, 14, 14);
+  color: beige;
+  cursor: pointer;
+}
+
+/* ANIMATION GUIRLANDE */
+
+#christmas-lights {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.gold {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px 10px;
+  margin: 30px 10px 10px 10px;
+  background-color: rgb(248, 244, 153);
+  box-shadow: 0 0 8px #ffffff, inset 0 0 8px #ffffff, 0 0 16px #c6e2ff,
+    inset 0 0 8px #c6e2ff, 0 0 8px #c6e2ff, inset 0 0 8px #c6e2ff;
+}
+.blue {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px 50px;
+  margin: 50px 10px 10px 10px;
+  background-color: turquoise;
+  box-shadow: 0 0 8px #ffffff, inset 0 0 8px #ffffff, 0 0 16px #c6e2ff,
+    inset 0 0 8px #c6e2ff, 0 0 8px #c6e2ff, inset 0 0 8px #c6e2ff;
+}
+.white {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px 10px;
+  margin: 10px;
+  background-color: white;
+  box-shadow: 0 0 8px #ffffff, inset 0 0 8px #ffffff, 0 0 16px #c6e2ff,
+    inset 0 0 8px #c6e2ff, 0 0 8px #c6e2ff, inset 0 0 16px #c6e2ff;
+}
+.pink {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px 50px;
+  margin: 50px 10px 10px 10px;
+  background-color: plum;
+  box-shadow: 0 0 8px #ffffff, inset 0 0 8px #ffffff, 0 0 16px #c6e2ff,
+    inset 0 0 16px #c6e2ff, 0 0 32px #c6e2ff, inset 0 0 32px #c6e2ff;
+}
+.purple {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px 10px;
+  margin: 10px;
+  background-color: mediumslateblue;
+  box-shadow: 0 0 8px #fff, inset 0 0 8px #fff, 0 0 16px #c6e2ff,
+    inset 0 0 16px #c6e2ff, 0 0 32px #c6e2ff, inset 0 0 32px #c6e2ff;
+}
+
+/* MUSIQUE D'AMBIANCE */
+
+#audio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: fantasy;
+  font-weight: lighter;
+  text-shadow: 0 0 20px rgb(218, 216, 148);
+  margin: 20px;
+}
+
+figcaption {
+  margin: 10px;
+}
